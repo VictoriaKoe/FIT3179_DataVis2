@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "",
+    "width": 400,
+    "height": 500,
+    
+    "data" :{"url": "https://raw.githubusercontent.com/RuiEnKoe/FIT3179_DataVisualisation2/refs/heads/main/data/followers_by_gender_survey_2022.csv"},
+
+    "encoding": {
+
+        "theta":
+        {
+            "field": "num_followers_gender", 
+            "stack": true,
+            "type": "quantitative"
+        },
+
+        "color":{
+            "field": "gender",
+            "type": "nominal",
+            "title": "Gender",
+            "scale": {
+                "range": ["#ed53b0", "#6495ED", "#7a0177", "#A13333"]
+            },
+            "legend": null
+        },
+
+        "tooltip": [
+            {
+                "field": "gender",
+                "type": "nominal",
+                "title": "Gender"
+            },
+            
+            {
+                "field": "num_followers_gender",
+                "type": "quantitative",
+                "title": "Number of fans",
+                "format": ","
+            },
+
+            {
+                "field": "percentage_gender",
+                "type": "quantitative",
+                "title": "Percentage of fans(%)",
+                "format": ","
+            }
+        ]
+
+    },
+
+    "layer":[
+
+        {
+            "mark": 
+            {
+                "type": "arc",
+                "outerRadius": 130,
+                "tooltip": true
+            }
+        }
+    ]
+        
+}
+    
+           

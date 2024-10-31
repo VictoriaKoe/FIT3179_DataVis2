@@ -1,0 +1,74 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "",
+    "height": 500,
+    "width": 950,
+    
+    "data": {"url": "https://raw.githubusercontent.com/RuiEnKoe/FIT3179_DataVisualisation2/refs/heads/main/data/bts_army_fanbase_evo_long.csv"},
+
+    "mark": {
+        "type": "bar",
+        "tooltip": true
+    },
+
+    "encoding":{
+        "y":{
+            "field": "Date",
+            "type": "ordinal",
+            "title": "Years",
+            "timeUnit": "year",
+            "axis":{
+                "labelAngle": 0,
+                "grid": false,
+                "title": null
+                
+            }
+        },
+
+        "x":{
+            "aggregate": "sum",
+            "field" : "number_of_fans",
+            "type": "quantitative",
+            "title": "Number of Fans",
+            "axis": {
+                "grid": false,
+                "title": null
+            }
+        },
+
+        "color":{
+            "field": "platforms",
+            "type": "nominal",
+            "scale" : {
+                "domain" : ["Facebook", "Instagram", "SoundCloud", "Spotify", "Twitter", "YouTube"],
+                "range": ["#1f77b4", "#9467bd", "#EC8305", "#74c476", "#A66E38", "#f768a1"]
+            },
+            "title": "Platforms"
+        },
+
+        "tooltip": [
+
+            {
+                "field": "Date",
+                "type": "ordinal",
+                "title": "Year",
+                "timeUnit": "year"
+            },
+            
+            {
+                "aggregate": "sum",
+                "field" : "number_of_fans",
+                "type": "quantitative",
+                "title": "Number of Fans",
+                "format": ","
+            },
+
+            {
+                "field": "platforms",
+                "type": "nominal",
+                "title": "Platform"
+            }
+        ]
+        
+    }
+}

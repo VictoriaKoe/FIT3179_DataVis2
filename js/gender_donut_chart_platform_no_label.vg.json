@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "data" :{"url": "/data/followers_by_gender_platform.csv"},
+
+    "mark": {
+        "type": "arc",
+        "outerRadius": 100,
+        "tooltip": true
+    },
+
+    "encoding": {
+        "column":{
+            "field": "platforms",
+            "type": "nominal",
+            "title": "Army Gender Distribution Based on Survey Respondents",
+            "header": {
+                "labelAngle": 0,
+                "labelAlign": "center",
+                "labelBaseline": "middle",
+                "labelFontSize": 12,
+                "titleFontSize": 12                        
+            } 
+        },
+
+        "theta":
+        {
+            "field": "percentage_followers",
+            "type": "quantitative",
+            "title": "Percentage of fans(%)"   
+        },
+
+        "color":{
+            "field": "gender",
+            "type": "nominal",
+            "title": "Gender",
+            "scale": {
+                "range": ["#FFC0CB", "#6495ED", "#7a0177"]
+            }
+        }
+    }
+
+    
+}
+    
+           

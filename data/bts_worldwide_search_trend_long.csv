@@ -1,0 +1,436 @@
+Week,artist,search_popularity_trends
+2023-01-01,BTS,95
+2023-01-08,BTS,98
+2023-01-15,BTS,85
+2023-01-22,BTS,83
+2023-01-29,BTS,94
+2023-02-05,BTS,91
+2023-02-12,BTS,81
+2023-02-19,BTS,83
+2023-02-26,BTS,82
+2023-03-05,BTS,83
+2023-03-12,BTS,79
+2023-03-19,BTS,82
+2023-03-26,BTS,76
+2023-04-02,BTS,77
+2023-04-09,BTS,75
+2023-04-16,BTS,80
+2023-04-23,BTS,74
+2023-04-30,BTS,78
+2023-05-07,BTS,80
+2023-05-14,BTS,80
+2023-05-21,BTS,76
+2023-05-28,BTS,87
+2023-06-04,BTS,89
+2023-06-11,BTS,100
+2023-06-18,BTS,76
+2023-06-25,BTS,74
+2023-07-02,BTS,77
+2023-07-09,BTS,83
+2023-07-16,BTS,66
+2023-07-23,BTS,64
+2023-07-30,BTS,60
+2023-08-06,BTS,68
+2023-08-13,BTS,62
+2023-08-20,BTS,59
+2023-08-27,BTS,61
+2023-09-03,BTS,59
+2023-09-10,BTS,59
+2023-09-17,BTS,65
+2023-09-24,BTS,57
+2023-10-01,BTS,56
+2023-10-08,BTS,56
+2023-10-15,BTS,57
+2023-10-22,BTS,56
+2023-10-29,BTS,51
+2023-11-05,BTS,52
+2023-11-12,BTS,56
+2023-11-19,BTS,59
+2023-11-26,BTS,58
+2023-12-03,BTS,63
+2023-12-10,BTS,66
+2023-12-17,BTS,59
+2023-12-24,BTS,69
+2023-12-31,BTS,59
+2024-01-07,BTS,51
+2024-01-14,BTS,54
+2024-01-21,BTS,50
+2024-01-28,BTS,50
+2024-02-04,BTS,49
+2024-02-11,BTS,49
+2024-02-18,BTS,47
+2024-02-25,BTS,45
+2024-03-03,BTS,47
+2024-03-10,BTS,44
+2024-03-17,BTS,47
+2024-03-24,BTS,55
+2024-03-31,BTS,53
+2024-04-07,BTS,47
+2024-04-14,BTS,53
+2024-04-21,BTS,48
+2024-04-28,BTS,50
+2024-05-05,BTS,49
+2024-05-12,BTS,49
+2024-05-19,BTS,51
+2024-05-26,BTS,51
+2024-06-02,BTS,57
+2024-06-09,BTS,65
+2024-06-16,BTS,50
+2024-06-23,BTS,45
+2024-06-30,BTS,46
+2024-07-07,BTS,48
+2024-07-14,BTS,46
+2024-07-21,BTS,47
+2024-07-28,BTS,46
+2024-08-04,BTS,47
+2024-08-11,BTS,49
+2024-08-18,BTS,46
+2024-08-25,BTS,46
+2023-01-01,Ariana Grande,20
+2023-01-08,Ariana Grande,18
+2023-01-15,Ariana Grande,19
+2023-01-22,Ariana Grande,18
+2023-01-29,Ariana Grande,17
+2023-02-05,Ariana Grande,17
+2023-02-12,Ariana Grande,18
+2023-02-19,Ariana Grande,20
+2023-02-26,Ariana Grande,19
+2023-03-05,Ariana Grande,19
+2023-03-12,Ariana Grande,18
+2023-03-19,Ariana Grande,17
+2023-03-26,Ariana Grande,18
+2023-04-02,Ariana Grande,19
+2023-04-09,Ariana Grande,55
+2023-04-16,Ariana Grande,27
+2023-04-23,Ariana Grande,21
+2023-04-30,Ariana Grande,19
+2023-05-07,Ariana Grande,18
+2023-05-14,Ariana Grande,17
+2023-05-21,Ariana Grande,18
+2023-05-28,Ariana Grande,17
+2023-06-04,Ariana Grande,17
+2023-06-11,Ariana Grande,16
+2023-06-18,Ariana Grande,17
+2023-06-25,Ariana Grande,20
+2023-07-02,Ariana Grande,16
+2023-07-09,Ariana Grande,16
+2023-07-16,Ariana Grande,50
+2023-07-23,Ariana Grande,40
+2023-07-30,Ariana Grande,36
+2023-08-06,Ariana Grande,26
+2023-08-13,Ariana Grande,22
+2023-08-20,Ariana Grande,24
+2023-08-27,Ariana Grande,22
+2023-09-03,Ariana Grande,19
+2023-09-10,Ariana Grande,21
+2023-09-17,Ariana Grande,22
+2023-09-24,Ariana Grande,18
+2023-10-01,Ariana Grande,19
+2023-10-08,Ariana Grande,18
+2023-10-15,Ariana Grande,16
+2023-10-22,Ariana Grande,17
+2023-10-29,Ariana Grande,17
+2023-11-05,Ariana Grande,18
+2023-11-12,Ariana Grande,19
+2023-11-19,Ariana Grande,19
+2023-11-26,Ariana Grande,19
+2023-12-03,Ariana Grande,20
+2023-12-10,Ariana Grande,21
+2023-12-17,Ariana Grande,23
+2023-12-24,Ariana Grande,26
+2023-12-31,Ariana Grande,23
+2024-01-07,Ariana Grande,34
+2024-01-14,Ariana Grande,35
+2024-01-21,Ariana Grande,27
+2024-01-28,Ariana Grande,24
+2024-02-04,Ariana Grande,24
+2024-02-11,Ariana Grande,25
+2024-02-18,Ariana Grande,20
+2024-02-25,Ariana Grande,23
+2024-03-03,Ariana Grande,43
+2024-03-10,Ariana Grande,65
+2024-03-17,Ariana Grande,42
+2024-03-24,Ariana Grande,33
+2024-03-31,Ariana Grande,28
+2024-04-07,Ariana Grande,24
+2024-04-14,Ariana Grande,21
+2024-04-21,Ariana Grande,21
+2024-04-28,Ariana Grande,20
+2024-05-05,Ariana Grande,26
+2024-05-12,Ariana Grande,21
+2024-05-19,Ariana Grande,21
+2024-05-26,Ariana Grande,20
+2024-06-02,Ariana Grande,20
+2024-06-09,Ariana Grande,22
+2024-06-16,Ariana Grande,19
+2024-06-23,Ariana Grande,20
+2024-06-30,Ariana Grande,18
+2024-07-07,Ariana Grande,19
+2024-07-14,Ariana Grande,20
+2024-07-21,Ariana Grande,20
+2024-07-28,Ariana Grande,19
+2024-08-04,Ariana Grande,22
+2024-08-11,Ariana Grande,19
+2024-08-18,Ariana Grande,19
+2024-08-25,Ariana Grande,18
+2023-01-01,Justin Bieber,21
+2023-01-08,Justin Bieber,21
+2023-01-15,Justin Bieber,21
+2023-01-22,Justin Bieber,27
+2023-01-29,Justin Bieber,23
+2023-02-05,Justin Bieber,23
+2023-02-12,Justin Bieber,21
+2023-02-19,Justin Bieber,23
+2023-02-26,Justin Bieber,66
+2023-03-05,Justin Bieber,79
+2023-03-12,Justin Bieber,62
+2023-03-19,Justin Bieber,41
+2023-03-26,Justin Bieber,32
+2023-04-02,Justin Bieber,31
+2023-04-09,Justin Bieber,26
+2023-04-16,Justin Bieber,24
+2023-04-23,Justin Bieber,23
+2023-04-30,Justin Bieber,23
+2023-05-07,Justin Bieber,21
+2023-05-14,Justin Bieber,20
+2023-05-21,Justin Bieber,19
+2023-05-28,Justin Bieber,20
+2023-06-04,Justin Bieber,20
+2023-06-11,Justin Bieber,20
+2023-06-18,Justin Bieber,19
+2023-06-25,Justin Bieber,19
+2023-07-02,Justin Bieber,19
+2023-07-09,Justin Bieber,21
+2023-07-16,Justin Bieber,20
+2023-07-23,Justin Bieber,20
+2023-07-30,Justin Bieber,21
+2023-08-06,Justin Bieber,20
+2023-08-13,Justin Bieber,21
+2023-08-20,Justin Bieber,24
+2023-08-27,Justin Bieber,24
+2023-09-03,Justin Bieber,21
+2023-09-10,Justin Bieber,21
+2023-09-17,Justin Bieber,20
+2023-09-24,Justin Bieber,19
+2023-10-01,Justin Bieber,18
+2023-10-08,Justin Bieber,21
+2023-10-15,Justin Bieber,23
+2023-10-22,Justin Bieber,25
+2023-10-29,Justin Bieber,23
+2023-11-05,Justin Bieber,22
+2023-11-12,Justin Bieber,20
+2023-11-19,Justin Bieber,25
+2023-11-26,Justin Bieber,31
+2023-12-03,Justin Bieber,24
+2023-12-10,Justin Bieber,22
+2023-12-17,Justin Bieber,25
+2023-12-24,Justin Bieber,24
+2023-12-31,Justin Bieber,21
+2024-01-07,Justin Bieber,21
+2024-01-14,Justin Bieber,20
+2024-01-21,Justin Bieber,22
+2024-01-28,Justin Bieber,24
+2024-02-04,Justin Bieber,31
+2024-02-11,Justin Bieber,37
+2024-02-18,Justin Bieber,23
+2024-02-25,Justin Bieber,36
+2024-03-03,Justin Bieber,26
+2024-03-10,Justin Bieber,24
+2024-03-17,Justin Bieber,24
+2024-03-24,Justin Bieber,34
+2024-03-31,Justin Bieber,38
+2024-04-07,Justin Bieber,28
+2024-04-14,Justin Bieber,30
+2024-04-21,Justin Bieber,26
+2024-04-28,Justin Bieber,34
+2024-05-05,Justin Bieber,53
+2024-05-12,Justin Bieber,31
+2024-05-19,Justin Bieber,23
+2024-05-26,Justin Bieber,21
+2024-06-02,Justin Bieber,19
+2024-06-09,Justin Bieber,18
+2024-06-16,Justin Bieber,19
+2024-06-23,Justin Bieber,18
+2024-06-30,Justin Bieber,22
+2024-07-07,Justin Bieber,31
+2024-07-14,Justin Bieber,22
+2024-07-21,Justin Bieber,22
+2024-07-28,Justin Bieber,20
+2024-08-04,Justin Bieber,18
+2024-08-11,Justin Bieber,19
+2024-08-18,Justin Bieber,32
+2024-08-25,Justin Bieber,32
+2023-01-01,One Direction,9
+2023-01-08,One Direction,7
+2023-01-15,One Direction,8
+2023-01-22,One Direction,7
+2023-01-29,One Direction,8
+2023-02-05,One Direction,9
+2023-02-12,One Direction,9
+2023-02-19,One Direction,8
+2023-02-26,One Direction,7
+2023-03-05,One Direction,10
+2023-03-12,One Direction,9
+2023-03-19,One Direction,10
+2023-03-26,One Direction,8
+2023-04-02,One Direction,8
+2023-04-09,One Direction,10
+2023-04-16,One Direction,8
+2023-04-23,One Direction,8
+2023-04-30,One Direction,7
+2023-05-07,One Direction,7
+2023-05-14,One Direction,7
+2023-05-21,One Direction,8
+2023-05-28,One Direction,8
+2023-06-04,One Direction,8
+2023-06-11,One Direction,8
+2023-06-18,One Direction,7
+2023-06-25,One Direction,7
+2023-07-02,One Direction,7
+2023-07-09,One Direction,8
+2023-07-16,One Direction,7
+2023-07-23,One Direction,8
+2023-07-30,One Direction,6
+2023-08-06,One Direction,6
+2023-08-13,One Direction,6
+2023-08-20,One Direction,6
+2023-08-27,One Direction,6
+2023-09-03,One Direction,5
+2023-09-10,One Direction,5
+2023-09-17,One Direction,6
+2023-09-24,One Direction,6
+2023-10-01,One Direction,6
+2023-10-08,One Direction,7
+2023-10-15,One Direction,6
+2023-10-22,One Direction,6
+2023-10-29,One Direction,6
+2023-11-05,One Direction,6
+2023-11-12,One Direction,6
+2023-11-19,One Direction,6
+2023-11-26,One Direction,5
+2023-12-03,One Direction,5
+2023-12-10,One Direction,5
+2023-12-17,One Direction,5
+2023-12-24,One Direction,6
+2023-12-31,One Direction,6
+2024-01-07,One Direction,5
+2024-01-14,One Direction,5
+2024-01-21,One Direction,6
+2024-01-28,One Direction,6
+2024-02-04,One Direction,6
+2024-02-11,One Direction,6
+2024-02-18,One Direction,6
+2024-02-25,One Direction,6
+2024-03-03,One Direction,6
+2024-03-10,One Direction,6
+2024-03-17,One Direction,5
+2024-03-24,One Direction,6
+2024-03-31,One Direction,6
+2024-04-07,One Direction,5
+2024-04-14,One Direction,5
+2024-04-21,One Direction,5
+2024-04-28,One Direction,6
+2024-05-05,One Direction,6
+2024-05-12,One Direction,6
+2024-05-19,One Direction,6
+2024-05-26,One Direction,6
+2024-06-02,One Direction,6
+2024-06-09,One Direction,5
+2024-06-16,One Direction,5
+2024-06-23,One Direction,5
+2024-06-30,One Direction,6
+2024-07-07,One Direction,6
+2024-07-14,One Direction,6
+2024-07-21,One Direction,8
+2024-07-28,One Direction,5
+2024-08-04,One Direction,5
+2024-08-11,One Direction,5
+2024-08-18,One Direction,5
+2024-08-25,One Direction,6
+2023-01-01,Billie Eilish,23
+2023-01-08,Billie Eilish,22
+2023-01-15,Billie Eilish,20
+2023-01-22,Billie Eilish,22
+2023-01-29,Billie Eilish,19
+2023-02-05,Billie Eilish,18
+2023-02-12,Billie Eilish,17
+2023-02-19,Billie Eilish,17
+2023-02-26,Billie Eilish,17
+2023-03-05,Billie Eilish,17
+2023-03-12,Billie Eilish,25
+2023-03-19,Billie Eilish,30
+2023-03-26,Billie Eilish,26
+2023-04-02,Billie Eilish,22
+2023-04-09,Billie Eilish,20
+2023-04-16,Billie Eilish,17
+2023-04-23,Billie Eilish,17
+2023-04-30,Billie Eilish,22
+2023-05-07,Billie Eilish,18
+2023-05-14,Billie Eilish,19
+2023-05-21,Billie Eilish,18
+2023-05-28,Billie Eilish,21
+2023-06-04,Billie Eilish,18
+2023-06-11,Billie Eilish,24
+2023-06-18,Billie Eilish,27
+2023-06-25,Billie Eilish,23
+2023-07-02,Billie Eilish,21
+2023-07-09,Billie Eilish,24
+2023-07-16,Billie Eilish,22
+2023-07-23,Billie Eilish,24
+2023-07-30,Billie Eilish,25
+2023-08-06,Billie Eilish,26
+2023-08-13,Billie Eilish,30
+2023-08-20,Billie Eilish,27
+2023-08-27,Billie Eilish,26
+2023-09-03,Billie Eilish,20
+2023-09-10,Billie Eilish,19
+2023-09-17,Billie Eilish,18
+2023-09-24,Billie Eilish,18
+2023-10-01,Billie Eilish,18
+2023-10-08,Billie Eilish,18
+2023-10-15,Billie Eilish,19
+2023-10-22,Billie Eilish,17
+2023-10-29,Billie Eilish,18
+2023-11-05,Billie Eilish,17
+2023-11-12,Billie Eilish,22
+2023-11-19,Billie Eilish,19
+2023-11-26,Billie Eilish,21
+2023-12-03,Billie Eilish,36
+2023-12-10,Billie Eilish,20
+2023-12-17,Billie Eilish,25
+2023-12-24,Billie Eilish,20
+2023-12-31,Billie Eilish,18
+2024-01-07,Billie Eilish,24
+2024-01-14,Billie Eilish,18
+2024-01-21,Billie Eilish,19
+2024-01-28,Billie Eilish,20
+2024-02-04,Billie Eilish,36
+2024-02-11,Billie Eilish,18
+2024-02-18,Billie Eilish,18
+2024-02-25,Billie Eilish,17
+2024-03-03,Billie Eilish,16
+2024-03-10,Billie Eilish,49
+2024-03-17,Billie Eilish,19
+2024-03-24,Billie Eilish,19
+2024-03-31,Billie Eilish,28
+2024-04-07,Billie Eilish,28
+2024-04-14,Billie Eilish,23
+2024-04-21,Billie Eilish,35
+2024-04-28,Billie Eilish,60
+2024-05-05,Billie Eilish,35
+2024-05-12,Billie Eilish,57
+2024-05-19,Billie Eilish,68
+2024-05-26,Billie Eilish,43
+2024-06-02,Billie Eilish,38
+2024-06-09,Billie Eilish,39
+2024-06-16,Billie Eilish,34
+2024-06-23,Billie Eilish,30
+2024-06-30,Billie Eilish,30
+2024-07-07,Billie Eilish,32
+2024-07-14,Billie Eilish,30
+2024-07-21,Billie Eilish,28
+2024-07-28,Billie Eilish,34
+2024-08-04,Billie Eilish,36
+2024-08-11,Billie Eilish,56
+2024-08-18,Billie Eilish,37
+2024-08-25,Billie Eilish,30

@@ -1,0 +1,215 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Love Yourself: Speak Yourself Tour Revenue (2018-2019)",
+    "width": 350,
+    "height": 350,
+
+    "data":{"url": "/data/bts_tour_con_revenue.csv"},
+
+    "encoding":
+    {
+        "x":
+        {
+            "field": "num_tickets_sold",
+            "type": "quantitative",
+            "axis": 
+            {
+                "title": "Total tickets sold",
+                "tickCount" : 3
+            },
+            "scale":
+            {
+                "type": "linear",
+                "domain": [0, 150000]
+            }
+        },
+
+        "y":
+        {
+            "field": "revenue_gained",
+            "type": "quantitative",
+            "axis": 
+            {
+                "title": "Total Revenue Gained (in million USD)",
+                "tickCount" : 3,
+                "format": ".2s"
+            },
+            "scale":
+            {
+                "type": "linear",
+                "domain": [0, 20000000]
+            }
+            
+        },
+
+        "tooltip": [
+            {
+                "field": "tour_con_name",
+                "type": "nominal",
+                "title": "Tour Concert Name"
+            },
+
+            {
+                "field": "year",
+                "type": "ordinal",
+                "title": "Year"
+            },
+
+            {
+                "field": "city",
+                "type" : "nominal",
+                "title": "City"
+            },
+
+            {
+                "field": "country",
+                "type": "nominal",
+                "title": "Country"
+            },
+
+            {
+                "field": "region",
+                "type": "nominal",
+                "title": "Region"
+            },
+
+            {
+                "field": "stadium",
+                "type": "nominal",
+                "title": "Stadium"
+            },
+
+            {
+                "field": "num_tickets_sold",
+                "type": "quantitative",
+                "title": "Total tickets sold",
+                "format": ","
+            },
+
+            {
+                "field": "revenue_gained",
+                "type": "quantitative",
+                "title": "Total Revenue gained (in USD)",
+                "format": ","
+            },
+
+            {
+                "field": "stadium_audience_capacity",
+                "type": "quantitative",
+                "title": "Stadium Audience Capacity" 
+            }
+        ] 
+    },
+
+    "layer": [
+
+        {
+            "mark": {
+                "type": "circle",
+                "tooltip": true
+            },
+
+            "encoding": {
+                "color":{
+                    "field": "region",
+                    "type": "nominal",
+                    "title": "Region",
+                    "scale": {
+                        "range": ["#984ea3","#f768a1","#ff7f00","#a6cee3"],
+                        "domain": [
+                            "Asia", 
+                            "Europe", 
+                            "Latin America", 
+                            "North America"
+                    ]
+                    }
+                },
+        
+                "size":
+                {
+                    "field": "stadium_audience_capacity",
+                    "type": "quantitative",
+                    "title": "Stadium Audience Capacity",
+                    "scale" : 
+                    {
+                        "type": "threshold",
+                        "domain": [10000, 30000, 50000, 70000, 90000],
+                        "range": [10, 50, 150, 250, 350, 600]
+        
+                    },
+                    "legend" :{
+                        "format" : ".1s"
+                    }
+                }
+            }
+        },
+
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -5,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+
+            },
+
+            "encoding": {
+                "text": {
+                    "field": "city",
+                    "type": "nominal"
+                },
+
+                "color":
+                {
+                    "value": "black"
+                },
+
+                "opacity": {
+                    "condition":{
+                        "test": "datum['city'] == 'Shizuoka'|| datum['city'] == 'Pasadena' || datum['city'] == 'Singapore' || datum['city'] == 'Hong Kong '",
+                        "value": 1
+                    },
+                    "value": 0
+                }
+            }
+        }
+
+    ],
+
+    "params": [
+        {
+            "name": "region_selection",
+            "bind":
+            {
+                "input": "select",
+                "options": 
+                [
+                    null,
+                    "Asia", 
+                    "Europe", 
+                    "Latin America", 
+                    "North America"
+                ],
+                "labels":
+                [
+                    "Show All",
+                    "Asia", 
+                    "Europe", 
+                    "Latin America", 
+                    "North America"
+                ],
+                "name": "Region "
+            }
+        }
+
+    ],
+
+    "transform":[
+        {
+            "filter": "region_selection == null || datum.region == region_selection"
+        }
+    ]
+
+}

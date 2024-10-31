@@ -1,0 +1,594 @@
+.dashboard_page{
+    width: 1200px;
+    background-color: #c8abfd;
+    margin: auto;
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+body {
+    background-color: #bc9afa;
+}
+
+body *{
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+    font-style: normal;
+    /* font-weight: 400; */
+}
+
+/* Intro layout */
+.para_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 30px;
+    /* background-color: aqua; */
+    padding: 5px;
+    height: 450px;
+    flex-direction: row;
+    width: 1190px;
+}
+
+.intro_container {
+    flex: 1 1 50%; /* Takes up 50% of the available space */
+    box-sizing: border-box;
+    padding: 40px;
+    padding-top: 25px;
+    /* background-color: yellow; */
+    /* align-items: flex-start; */
+    max-width: 750px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.img_container {
+    flex: 0 0 50%; /* Fixed width for the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    max-height: max-content;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    max-width: 450px;
+}
+
+/* font/content */
+p {
+    font-family: "Open Sans", sans-serif;
+    /* font (em) = 16pt*/
+    font-size: 1.4em;
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    /* height: 100%; */
+    color: rgb(62, 61, 61)
+}
+
+strong{
+    font-weight: 900;
+    color: black;
+}
+
+
+#title{
+    font-size: 2.5em;
+    font-weight: 900;
+    margin: 0;
+    text-align: left;
+}
+
+#maptitle{
+	text-align: center;
+    text-size-adjust: 30;
+    font-size: 1.3075em;
+}
+
+.content_left{
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.content_right{
+    padding-left: 30px;
+    padding-top: 10px;
+    text-align: left;
+    padding-right: 5px;
+
+}
+
+/* Layout */
+
+/* heading container */
+.pure-g {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* background-color:aqua; */
+    width: 1180px;
+    padding: 10px;
+}
+
+/* outer vis container */
+.chropleth_map_container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch;
+    margin-top: 20px; */
+    top: 0px;
+    /* background-color: navajowhite; */
+    padding: 10px;
+    /* height: 500; */
+    width: 1180px;
+    /* flex-direction: row; */
+}
+
+.gender_pie_container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch; */
+    margin-bottom: 20px;
+    /* background-color: aqua; */
+    padding: 10px;
+    height: auto;
+    flex-direction: row;
+    width: 1180px;
+    gap: 20px;
+}
+
+.fanbase_evo_container{
+    display: flex;
+    justify-content: center;
+    /* align-items: stretch; */
+    margin-bottom: 30px;
+    /* background-color: aqua; */
+    padding: 10px;
+    height: auto;
+    flex-direction: row;
+    width: 1180px;
+}
+
+.revenue_container{
+    display: flex;
+    justify-content: center;
+    /* align-items: stretch; */
+    margin-bottom: 30px;
+    /* background-color: aqua; */
+    padding: 10px;
+    height: auto;
+    flex-direction: row;
+    width: 1180px;
+}
+
+/* inner vis container (insert vis) */
+.visualisation_container{
+    flex: 1; /* Takes up 50% of the available space */
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Reduced shadow */
+}
+
+.visualisation div {
+    width: 100%;
+    height: 300px; /* Reduced height */
+    max-width: 500px; /* Added max-width to keep the visual compact */
+}
+
+.vis_container2{
+    box-sizing: border-box;
+    padding: 10px;
+    /* background-color: white; */
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Reduced shadow */
+}
+
+/* annotation */
+.map_annotation{
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(900px, 120px);
+    /* translate(x, y)*/
+    border: 1px solid rgb(181, 179, 179);
+    /* Reduced shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.map_annotation2{
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(-15px, 185px);
+    border: 1px solid rgb(181, 179, 179);
+    /* Reduced shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.pie_annotation{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    /* White background with 50% opacity */
+    width: 130px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(410px, 190px);
+    /* translate(x, y)*/
+    border: 1px solid rgb(255, 255, 255);
+    /* Reduced shadow */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+}
+
+.pie_annotation2{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    /* White background with 50% opacity */
+    width: 150px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(110px, -85px);
+    /* translate(x, y)*/
+    border: 1px solid rgb(255, 255, 255);
+    /* Reduced shadow */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+}
+
+.pie_annotation3{
+    position: absolute;
+    background-color:rgb(255, 255, 255);
+    /* White background with 50% opacity */
+    width: 150px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(250px, -80px);
+    /* translate(x, y)*/
+    border: 1px solid rgb(255, 255, 255);
+    /* Reduced shadow */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+}
+
+.pie_annotation4{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    /* White background with 50% opacity */
+    width: 150px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(275px, -30px);
+    /* translate(x, y)*/
+    border: 1px solid rgb(255, 255, 255);
+    /* Reduced shadow */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+}
+
+.bar_annotation{
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(275px, -30px);
+    /* translate(x, y)*/
+    border: 1px solid rgb(181, 179, 179);
+    /* Reduced shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.stacked_bar_annotation{
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    padding: 10px;
+    text-align: left;
+    top: 20%;
+    /* bottom: 33%; */
+    /* left: 50%; */
+    transform: translate(950px, 70px);
+    /* translate(x, y)*/
+    border: 1px solid rgb(181, 179, 179);
+    /* Reduced shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.svg_class{
+    width: 100%;
+    height: 100% ;
+    position: absolute; 
+    z-index: 10;
+    top: 0; 
+    left: 0;
+    pointer-events: none
+}
+
+/* transition text container */
+.short_para_container {
+    display: flex;
+    justify-content: center;
+    /* align-items: stretch; */
+    margin-bottom: 20px;
+    /* background-color: aqua; */
+    padding: 10px;
+    height: auto;
+    flex-direction: row;
+    width: 1180px;
+    gap: 20px;
+}
+
+.intro_text{
+    flex: 1 1 50%; /* Takes up 50% of the available space */
+    box-sizing: border-box;
+    padding: 40px;
+    padding-top: 10px;
+    /* background-color: yellow; */
+    /* align-items: flex-start; */
+    /* max-width: 750px; */
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* member's info */
+
+/* outer container */
+.info_container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    margin-top: 30px;
+    /* background-color: aqua; */
+    padding: 5px;
+    /* height: 450px; */
+    flex-direction: row;
+    width: 1190px;
+    gap: 20px;
+}
+
+/* inner container */
+.member_container{
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 20px;
+    /* background-color: white; */
+    /* align-items: flex-start; */
+    max-width: 550px;
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+/* member's image */
+.member_img_container {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 20px;
+    /* background-color: white; */
+    /* align-items: flex-start; */
+    max-width: 550px;
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+.member_info_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: violet; */
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-overlay.active .popup-card {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+.member-popup-img {
+    width: 200px;
+    height: 200px;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.member-img {
+    width: 150px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10%;
+    cursor: pointer;
+    /* transition: transform 0.3s ease; */
+    
+}
+
+#member-info {
+    white-space: pre-line; /* This will respect line breaks */
+    text-align: left; /* Align text to the left for better readability */
+    padding-left: 5px;
+    margin-top: 10px;
+}
+
+
+/* footer */
+.source_container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch; */
+    margin-bottom: 20px;
+    /* background-color: white; */
+    padding: 10px;
+    height: 150px;
+    flex-direction: row;
+    width: 1180px;
+    gap: 20px;
+}
+
+/* source */
+.source{
+    flex: 1 1 50%; /* Takes up 50% of the available space */
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 10px;
+    /* background-color: yellow; */
+    /* align-items: flex-start; */
+    /* max-width: 750px; */
+    text-align: left;
+    margin: 0 auto;
+    max-width: max-content;
+}
+
+/* visualisation */
+#choropleth_map_popularity{
+    top: 20px;
+    /* align-items: center; */
+    left: 2px;
+    right: 5px; 
+    bottom: 200px;
+    padding-right: 2px;
+    /* text-align: center; */
+    margin-bottom: 35px;
+    /* height: 1000px; */
+}
+
+#bar_age{
+    width: 80%;
+    height: 80%;
+    /* top: 10px; */
+    /* left: 20px; */
+    /* right: 5px; */
+    bottom: 40px;
+    padding-right: 30px;
+}
+
+#multiple_line_chart1_trend{
+    top: 10px;
+    left: 5px;
+    right: 10px; 
+    /* background-color: blue; */
+    bottom: 200px;
+    padding-right: 50px;
+    /* text-align: center; */
+    margin-bottom: 35px;
+    /* height: 1000px; */
+}
+
+/* unused */
+/* .multiple_line_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 30px;
+    background-color: aqua;
+    padding: 10px;
+    height: auto;
+    flex-direction: row;
+    width: 1500px;
+}
+
+.line_graph_container {
+    /* Takes up 50% of the available space */
+    /* flex: 1 1 50%; 
+    box-sizing: border-box;
+    padding: 50px;
+    background-color: yellow;
+    align-items: flex-start; 
+    
+}
+
+#body_text{
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.6;
+}
+
+#linetitle{
+    text-align: center;
+    text-size-adjust: 15px;
+}
+
+footer{
+text-align: left;
+padding: 10px;
+background-color: white;
+margin-top: 20px;
+gap: 20px;
+width: 1500px;
+}
+*/
+

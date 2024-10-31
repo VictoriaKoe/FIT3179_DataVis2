@@ -1,0 +1,116 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "data": {"url": "/data/followers_by_gender_platform.csv"},
+
+    "facet": {
+        "field": "platforms",
+        "type": "nominal",
+        "title": "Percentage Army Gender Distribution Based on Social Platforms",
+        "header": {
+            "labelAlign": "center",
+            "labelBaseline": "middle",
+            "labelFontSize": 12,
+            "titleFontSize": 12                        
+        }
+    },
+
+    "spec": {
+
+        "layer": [
+            {
+                "mark": {
+                    "type": "arc",
+                    "outerRadius": 100,
+                    "tooltip": true
+                },
+
+                "encoding": {
+
+                    "theta": {
+                        "field": "percentage_followers",
+                        "type": "quantitative",
+                        "title": "Percentage of fans(%)",
+                        "stack": true
+                    },
+
+                    "color": {
+                        "field": "gender",
+                        "type": "nominal",
+                        "title": "Gender",
+                        "scale": {
+                            "range": ["#FFC0CB", "#6495ED"]
+                        }
+                    }
+                }
+            },
+
+            {
+                "mark": {
+                    "type": "text",
+                    "radius": 120,
+                    "align": "center",
+                    "baseline": "line-top",
+                    "dy": 10
+                },
+
+                "encoding": {
+
+                    "text": {
+                        "field": "percentage_followers",
+                        "type": "quantitative"                    
+                    },
+
+                    "theta": {
+                        "field": "percentage_followers",
+                        "type": "quantitative",
+                        "stack": true
+                    },
+
+                    "color": {
+                        "field": "gender",
+                        "type": "nominal"                    
+                    }
+                }
+            },
+
+            {
+                "layer":[
+                {
+                    "mark": 
+                    {
+                        "type": "text",
+                        "radius": 120,
+                        "align": "center",
+                        "baseline": "line-top",
+                        "dx": 3,
+                        "dy": -5             
+                    },
+    
+                    "encoding":
+                    {
+                        "text":
+                        {
+                            "field": "gender",
+                            "type": "nominal"
+    
+                        },
+
+                        "theta": {
+                            "field": "percentage_followers",
+                            "type": "quantitative",
+                            "stack": true
+                        },
+
+                        "color": {
+                            "field": "gender",
+                            "type": "nominal"                    
+                        }
+                    }    
+                }
+                ]
+            }
+
+        ]
+    }
+}

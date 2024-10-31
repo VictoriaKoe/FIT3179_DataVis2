@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTS The Global Wave Dashboard</title>
+
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <!--Import Google Style words-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+  <!-- Import CSS -->
+  <link rel="stylesheet" type="text/css" href="css\style.css" media="all">
+
+  <!--Import pure css-->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"crossorigin="anonymous">
+
+</head>
+
+<!--include body of dashboard-->
+<body>
+
+  <!-- dashboard size-->
+  <div class = dashboard_page>
+
+  <!--insert image-->
+  <img src = 'css/bts_banner.jpg' alt="background image"
+  style = 'width: 1200px; display: block'>
+
+  <!-- insert short intro about BTS -->
+  <div class = para_container>
+    <!-- intro container -->
+    <div class = intro_container>
+      <!-- intro paragraph -->
+      <p>
+        BTS, or Bangtan Sonyeondan (Beyond The Scene), is a <strong>Grammy-nominated South Korean </strong>boy band that debuted in June 2013. They have gained <strong>global fame</strong> for their <strong>self-produced music</strong> and <strong>record-breaking achievements</strong>. Known as <strong>"21st Century Pop Icons"</strong>, they have earned <strong>four No. 1 songs</strong>, <strong>sold-out stadiums</strong>, and been named <strong>TIME's Entertainer of the Year 2020</strong>. They have also won numerous prestigious awards, including the <strong>Billboard Music Awards</strong>, the <strong>American Music Awards</strong>, and the <strong>MTV Video Music Awards</strong>. Their dedicated fanbase, <strong>ARMY (Adorable Representative M.C. for Youth)</strong>, is known for spreading love and positivity worldwide.
+        <br><br>
+      </p>
+    </div>
+
+    <!-- image container -->
+    <div class = img_container> 
+      <!-- insert bts image -->
+      <img src = 'css/bts_times.jpg' alt="BTS image">
+    </div>
+
+  <!-- end of paragraph container -->
+  </div>
+   
+  <!-- pure grid group -->
+  <!-- 1st subheading: choloropleth map -->
+  <div class="pure-g">
+    <div id="title" class="pure-u-1">
+        <h2>Echoes Around the Globe</h2>
+    </div>
+  </div>
+
+  <!-- short para link to choloropleth map -->
+   <!-- popularity of BTS across world -->
+  <!-- transition -->
+  <div class = "short_para_container">
+
+    <div class = "intro_text">
+      <p>
+        BTS has <strong>dominated the KPOP industry</strong> and <strong>captivated audiences worldwide</strong>. But what accounts for their immense popularity? <br><br>Their <strong>innovative approach to music</strong>, characterized by <strong>self-produced tracks</strong> that explore themes of <strong>youth, love, and societal issues</strong>, resonates deeply with listeners across the globe.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        Additionally, their <strong>powerful performances</strong> also contribute to their widespread appeal, as they deliver <strong>high-energy shows</strong> that captivate audiences and showcase their exceptional talent.<br><br>
+        Thus, the visualisation below indicates BTS's global popularity based on the number of Instagram followers as of August 2024.
+      </p>
+    </div>
+  </div>
+
+  <!-- choloropleth map title -->
+  <div class="pure-g">
+    <div id="maptitle" class="pure-u-1">
+      <h3>Popularity of BTS Based on Instagram Followers (August 2024)</h3>
+    </div>
+  </div>
+  
+  <!-- choloropleth map -->
+  <div class = 'chropleth_map_container'>
+
+    <!-- map container -->
+    <div class = 'vis_container2'>
+      <!-- insert map -->
+      <div id = "choropleth_map_popularity"></div>
+      
+      <!-- annotation line -->
+      <svg class = svg_class>
+        <line 
+        x1="67.65%" y1="34%" 
+        x2="77.25%" y2="45.15%" 
+        style = "stroke: lightgray; stroke-width:1" 
+        />
+      </svg>
+
+      <!-- annotation line -->
+      <svg class = svg_class>
+        <line 
+        x1="20%" y1="33.5%" 
+        x2="5%" y2="44%" 
+        style = "stroke: lightgray; stroke-width:1" 
+        />
+      </svg>
+    
+      <!-- map annotation container -->
+      <div class = "map_annotation">
+        South Korea, the origin of the KPOP industry, is dominated by BTS, who have the <strong>highest number of Instagram followers</strong>. BTS has a <strong>strong presence</strong> in the country and is regarded as a <strong>national treasure</strong> .
+      </div>
+
+      <div class = "map_annotation2">
+        United States of America, is one of the country that BTS is <strong>one of the most popular KPOP band</strong> in the country. BTS has the <strong>positive number</strong> of Instagram followers in the region.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <p>
+    The data has been collected from the Soundchart, which analyses audience and song trends of BTS across worlwide. 
+    This choropleth map visualises the popularity of BTS based on the number of Instagram followers in August 2024. It shows the number of Instagram followers in each country per 10,000 population, with darker shades indicating a higher number of followers.
+  </p> -->
+  
+  <!-- pure grid group -->
+  <!-- 2nd subheading: multiple line charts -->  
+    <div class="pure-g">
+    <div id="title" class="pure-u-1">
+        <h2>The TrendSetters</h2>
+    </div>
+  </div>
+
+  <!-- transition -->
+  <div class = "short_para_container">
+    <div class = "intro_text">
+      <p>
+        BTS has emerged as the <strong>ultimate trendsetters</strong> in <strong>KPOP</strong> and even <strong>globally</strong>. They have achieved a level of <strong>global influence and success</strong> that no other bands have come close to matching. As the <strong>first KPOP group</strong> to <strong>break into</strong> the <strong>U.S. music market</strong>, they laid the <strong>foundation</strong> for KPOP's global reach.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        The <strong>group's impact on KPOP </strong> is <strong>unparalleled</strong>, as they have <strong>redefined the genre's boundaries</strong>  and <strong>paved the way</strong> for future generation of artists, while <strong>expanding the global reach of KPOP</strong>. Their <strong>unmatched success </strong>continues to <strong>inspire other KPOP bands</strong>, <strong>shaping the future of the industry</strong> .
+      </p>
+    </div>
+
+  </div>
+
+  <!-- multiple lines chart worldwide-->
+  <!-- pure grid group -->
+  <div class="pure-g">
+
+    <!-- annotation container  -->
+    <!-- insert short annotate  -->
+    <div class="pure-u-1-2" >
+      <div class="description content_left">
+        <p>
+          This chart shows Google trends worldwide search and popularity data for past 1 year (Jan 2023-Jan 2024), comparing <span style = "color:#6a3d9a; font-weight: 900;">BTS</span> with different singers and artists around the globe, highlighting the <strong>global influence of </strong><span style = "color:#6a3d9a; font-weight: 900;">BTS</span>.
+          <br><br>
+          It compares <span style = "color:#6a3d9a; font-weight: 900;">BTS</span> with popular international artists like <span style = "color:#d37100; font-weight: 900;">Ariana Grande</span>, <span style = "color:#1f78b4; font-weight: 900;">Justin Bieber</span>, <span style = "color:#493628; font-weight: 900;">One Direction</span>, and <span style = "color:#286d61; font-weight: 900;">Billie Ellish</span>.
+        </p>
+      </div>
+    </div>
+
+    <!-- multiple lines container -->
+    <!-- insert multiple line -->
+    <div class="pure-u-1-2" style = "box-sizing: border-box; background-color: white;border-radius: 8px">
+      <div id="multiple_line_chart1_trend"></div>
+    </div>
+
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- multiple lines chart KPOP-->
+  <!-- pure grid group -->
+  <div class="pure-g">
+
+    <!-- multiple lines container -->
+    <div class="pure-u-1-2" style = "box-sizing: border-box; background-color: white;border-radius: 8px">
+      <div id = "multiple_line_chart_trend" ></div>
+    </div>
+
+    <!-- annotation container -->
+    <div class = "pure-u-1-2">
+      <div class="description content_right">
+        <p>
+          <span style = "color:#6a3d9a; font-weight: 900;">BTS</span>, originally from the KPOP genre, has <strong>dominated the industry</strong>, with no other bands coming close to their level of <strong>global influence and success.</strong> The group's impact on KPOP is <strong>unmatched</strong>, setting <strong>new standards </strong>in <strong>music and performance</strong>. 
+          <br><br>
+          This chart compares <span style = "color:#6a3d9a; font-weight: 900;">BTS</span> with other top-performing KPOP bands like  <span style = "color:#fb00b8e2; font-weight: 900;">BLACKPINK</span>, <span style = "color:#837651; font-weight: 900;">EXO</span>, <span style = "color:#fdb3a5; font-weight: 900;">TWICE</span>, and <span style = "color:#7299e3; font-weight: 900;">SEVENTEEN</span>, highlighting the competitive landscape within the genre. While these groups have achieved significant success, <span style = "color:#6a3d9a; font-weight: 900;">BTS</span> <strong>remains the benchmark</strong> by which all other KPOP acts are measured.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <!-- 3rd subheading: ARMY Demographics -->
+  <div class="pure-g">
+    <div id="title" class="pure-u-1">
+        <h2>Demographics of ARMY</h2>
+    </div>
+  </div>
+
+  <!-- transition -->
+  <div class = "short_para_container">
+    <div class = "intro_text">
+      <p>
+        After discovering BTS's massive popularity, you are probably wondering who makes up their dedicated fanbase, ARMY. 
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        Well, ARMY spans across the globe, making it hard to sum them up in just a few words. However, we can give you some insights into their demographics. 
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        Thus, a survey was conducted in 2022 to gather data on the fanbase and better understand who ARMY is.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- (pie and bar chart) demographics container -->
+  <div class = 'gender_pie_container'>
+    
+    <!-- pie chart container -->
+    <div class = 'visualisation_container'>
+      <h3>Army Gender Distribution Based on Survey Respondents in 2022</h3>
+
+      <!-- insert pie chart -->
+      <div id = "pie_chart_gender"></div>
+
+      <!-- annotation line -->
+
+      <!-- female -->
+      <svg class = svg_class>
+        <line 
+        x1="58.75%" y1="45%" 
+        x2="77.25%" y2="49.15%" 
+        style = "stroke: rgb(190, 190, 190); stroke-width:1" 
+        />
+      </svg>
+
+      <!-- male -->
+      <svg class = svg_class>
+        <line 
+        x1="45.95%" y1="30%" 
+        x2="40.5%" y2="14.5%" 
+        style = "stroke: rgb(190, 190, 190); stroke-width:1" 
+        />
+      </svg>
+
+      <!-- non-binary -->
+      <svg class = svg_class>
+        <line 
+        x1="48.5%" y1="30%" 
+        x2="47.75%" y2="15.5%" 
+        style = "stroke: rgb(190, 190, 190); stroke-width:1" 
+        />
+      </svg>
+
+      <!-- other -->
+      <svg class = svg_class>
+        <line 
+        x1="49.5%" y1="29.5%" 
+        x2="50.5%" y2="20%" 
+        style = "stroke: rgb(190, 190, 190); stroke-width:1" 
+        />
+      </svg>
+
+      <!-- pie annotation container -->
+      <div class = "pie_annotation">
+        <span style = "color: #ed53b0; font-weight: 500;">
+          Female
+          96.23% (~541082 fans)
+        </span>
+      </div>
+
+      <div class = "pie_annotation2">
+        <span style = "color: #6495ED; font-weight: 500;">
+          Male
+          1.35% <br>(~7,590 fans)
+        </span>
+      </div>
+
+      <div class = "pie_annotation3">
+        <span style = "color: #7a0177; font-weight: 500;">
+          Non-binary
+          1.35% (~10,008 fans)
+        </span>
+      </div>
+
+      <div class = "pie_annotation4">
+        <span style = "color: #A13333; font-weight: 500;">
+          Other
+          0.64% (~3,598 fans)
+        </span>
+      </div>
+
+    </div>
+
+    <!-- bar chart container -->
+    <div class = 'visualisation_container'>
+      <h3 style = 'padding-bottom: 50px; padding-left: 50px'> ARMY Age Distribution</h3>
+
+      <!-- insert bar chart -->
+      <div id = "bar_age"></div>
+
+      <!-- bar annotation line-->
+      <svg class = svg_class>
+        <line 
+        x1="40.5%" y1="22%" 
+        x2="49.5%" y2="18.5%" 
+        style = "stroke: rgb(190, 190, 190); stroke-width:1" 
+        />
+      </svg>
+
+      <!-- bar annotation container -->
+      <div class = "bar_annotation">
+        <strong>18-29 </strong>age group is the <strong>largest</strong> within the ARMY community, accounting for <strong>53.63% (301,566 fans)</strong>.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- short para abt demogrphics -->
+  <!-- transition -->
+  <div class = "short_para_container">
+    <div class = "intro_text">
+      <p>
+        This global community is incredibly <strong>diverse</strong>, spanning <strong>various age groups and genders</strong>. While ARMY includes fans of all ages, a <strong>significant portion</strong> falls within the <strong>18-29 age range</strong>, with many younger fans (teens and young adults) actively engaging in fandom activities.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        Gender-wise, the ARMY community is <strong>predominantly female</strong>, accounting for <strong>96.23%</strong> of total survey respondents. Despite the large female majority, the fanbase is seeing a <strong>growing number of male fans</strong>, as well as fans of <strong>other genders</strong>, including <strong>non-binary individuals</strong>, within the ARMY community.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        This diversity highlights <strong>BTS's broad appeal</strong> and their <strong>unique ability</strong> to connect with people from different backgrounds through their <strong>meaningful music and positive messages</strong>.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- pure grid group -->
+  <!-- 4th subheading: Fanbase Evolution -->
+  <div class="pure-g">
+    <div id="title" class="pure-u-1">
+        <h2>The Evolution of ARMY Community</h2>
+    </div>
+  </div>
+
+  <!-- short para abt demogrphics -->
+  <!-- transition -->
+  <div class = "short_para_container">
+    
+    <div class = "intro_text">
+      <p>
+        The <strong>popularity</strong> of BTS has <strong>grown exponentially</strong> over the years, with their fanbase, <strong>ARMY</strong>, <strong>expanding</strong> across various platforms.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        However, it is difficult to determine how the ARMY community has evolved over time.
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        The visulatisation below provide some insights based on <strong>6 main platforms</strong>, highlighting the <strong>growth and engagement of fans</strong> across different platforms.
+      </p>
+    </div>
+
+  </div>  
+  
+    <!-- fanbase evolution container -->
+    <div class = 'fanbase_evo_container'>
+
+      <!-- stacked bar container-->
+      <div class = 'visualisation_container'>
+        <h3>ARMY Evolution Across Various Platforms (January 3, 2020 - August 30, 2020)</h3>
+
+        <!-- insert stacked bar -->
+        <div id = "stacked_bar_fanbase"></div>
+
+        <!-- annotation line -->
+        <svg class = svg_class>
+          <line 
+          x1="79.75%" y1="61.5%" 
+          x2="81.5%" y2="45%" 
+          style = "stroke: rgb(190, 190, 190); stroke-width:1" 
+          />
+        </svg>
+
+        <!-- stacked bar annotation container -->
+        <div class = "stacked_bar_annotation">
+          Although all members of BTS served in the military in <strong>2023</strong>, the fanbase reached its <strong>highest peak</strong> compared to other years. 
+        </div>
+      </div>
+
+    </div>
+
+  <!-- short para abt demogrphics -->
+  <!-- transition -->
+  <div class = "short_para_container">
+    
+    <div class = "intro_text">
+      <p>
+        Over the years, the ARMY community has expanded across various platforms, not only limited to social media but also music platforms. In <strong>2023</strong>, the number of fans <strong>peaked</strong> at approximately <strong>14.84 billion followers in total</strong>, even though  <strong>the group was on hiatus</strong>.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        Platforms like <strong>Instagram and YouTube</strong> have gained significant traction, with <strong>YouTube followers</strong> reaching approximately <strong>4 billion</strong> and Instagram followers reaching approximately <strong>3.9 billion</strong> in <strong>2023</strong>.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        This highlights a <strong>shift in how fans interact with BTS</strong>. This evolution reflects <strong>the band's expanding influence</strong> and the <strong>increasing diversity of their audience</strong>, as fans embrace multiple channels to connect with their favorite artists.
+      </p>
+    </div>
+
+
+  </div>
+
+  <!-- pure grid group -->
+  <!-- 5th subheading: Concert Revenue, Popularity and Economic Driven -->
+  <div class="pure-g">
+    <div id="title" class="pure-u-1">
+        <h2>The Influencers</h2>
+    </div>
+  </div>
+
+  <!-- short para abt concert revenue, popularity and economic driven -->
+  <!-- transition -->
+  <div class = "short_para_container">
+    <div class = "intro_text">
+      <p>
+          With the passage of time, it has been noticed that BTS's impact not only restricted to music but it is also <strong>positively influencing their homeland </strong>and <strong>spreading their culture worldwide</strong>.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        Touring Data has provided data that indicates the BTS is contributing to the countries they visit in terms of <strong>economy</strong>. 
+      </p>
+    </div>
+
+  </div>
+
+  <p style = "text-align: center; font-size: 1em; color: rgb(109, 107, 107);">
+    Feel free to select a region from the legend to <br>highlight its data. You can also filter by region or <br> tour name using the drop-down menu. <br>Hover over the tooltip to view more details.
+  </p>
+
+  <!-- concert revenue container -->
+  <div class = 'revenue_container'>
+
+    <!-- buuble plot container-->
+    <div class = 'visualisation_container'>
+      <h3>BTS World Tours Revenue (2018-2022)</h3>
+
+      <!-- insert bubble plot-->
+      <div id = "bubble_chart_revenue"></div>
+    </div>
+  </div>
+
+  <!--concert and economic -->
+  <!-- transition -->
+  <div class = "short_para_container">
+    <div class = "intro_text">
+      <p>
+        The Touring Data has reported that the <strong style = "font-style: italic;">Love Yourself: Speak Yourself</strong> world tour in <strong>2018-2019</strong> generated a total revenue of <strong>$2.46 billion</strong>, with <strong> 1.93 milion</strong> tickets sold. 
+        <br><br>
+        In <strong>2020-2021</strong>, due to the <strong>COVID-19 outbreak</strong>, many artists, including <strong>BTS</strong>, were <strong>unable to hold world tour concerts</strong>, disrupting the economy.
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        However, this changed at the <strong>end of 2021</strong> when BTS became the <strong>first KPOP artists</strong> to resume touring with the <strong style = "font-style: italic;">Permission to Dance On Stage</strong> world tour. This tour generated a total revenue of <strong>$7.5 billion</strong>, with <strong>4.5 million</strong> tickets sold.
+        <br><br>
+        As a result of these concerts, the <strong>economy</strong> gradually began to <strong>recover</strong>, <strong>positively impacting</strong> various sectors, including <strong>tourism and hospitality</strong>. 
+      </p>
+    </div>
+
+    <div class = "intro_text">
+      <p>
+        While the <strong>size of the stadiums</strong> may have <strong>influenced the revenue</strong>, it is undeniable that <strong>BTS significantly contributed </strong> to the <strong>global economy</strong> and <strong>tourism </strong> in the countries they visited, as these concerts  <strong>serve as catalyts</strong> for <strong> broader economic growth</strong> beyond just ticket sales.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- pure grid group -->
+  <!-- 6th subheading: BTS Member -->
+  <div class="pure-g">
+    <div id="title" class="pure-u-1">
+        <h2>The BTS</h2>
+    </div>
+  </div>
+
+  <!-- insert BTS members info-->
+  <div class = info_container>
+
+    <!-- BTS member container -->
+    <div class = member_container>
+      <!-- short introduce member paragraph -->
+      <div class = "intro_text">
+        <p>
+          Till now, we saw BTS not just as a music band but also as the TrendSetters, the Influencers, and its Popularity Around the Globe.
+          <br><br> 
+
+          ... But what makes <strong>THE BTS</strong>?<br>
+          BTS is made up of <strong>7</strong> amazingly talented and hard working people. They are <strong>RM</strong>, <strong>Jin</strong>, <strong>Suga</strong>, <strong>J-Hope</strong>, <strong>Jimin</strong>, <strong>V</strong>, and <strong>Jungkook</strong>.
+          <br><br>
+
+          Now, let us take a peak into these 7 amazing people who make up <strong>THE BTS</strong>.
+          <br><br>
+
+          Click on the images to know more about each member.
+        </p>
+      </div>
+    </div>
+
+    <!-- image container -->
+    <div class = "member_img_container">
+      
+      <div class = "member_info_container">
+
+        <!-- rm -->
+        <img src = 'css/rm.jpg' alt="RM" class = "member-img" data-member="RM">
+        <!-- jin -->
+        <img src = 'css/jin.jpg' alt="Jin" class = "member-img" data-member="Jin">
+        <!-- suga -->
+        <img src = 'css/suga.jpg' alt="Suga" class = "member-img" data-member="Suga">
+        <!-- j-hope -->
+        <img src = 'css/jhope.jpg' alt="J-Hope" class = "member-img" data-member="J-Hope">
+        <!-- jimin -->
+        <img src = 'css/jimin.jpg' alt="Jimin" class = "member-img" data-member="Jimin">
+         <!-- v -->
+         <img src = 'css/v.jpg' alt="V" class = "member-img" data-member="V">
+        <!-- jk -->
+        <img src = 'css/jk.jpg' alt="JK" class = "member-img" data-member="Jung Kook">
+      </div>
+
+      <div class="popup-overlay">
+        <span class="close-button">&times;</span>
+        <div class="popup-card">
+            <img src="" alt="" class="member-popup-img">
+            <h2 id="member-name"></h2>
+            <p id="member-info"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class = "source_container">
+
+    <!-- designer -->
+    <div class = "source">
+      <p style = "font-size: 15px">
+        Designed by: Koe Rui En
+        <br>
+        Date of Completion: Sunday, 13 October 2024
+        <br>
+        Feel share to share and adapt this visualisation with credit!
+      </p>
+    </div>
+
+    <!-- source -->
+    <div class = "source">
+      <p style = "font-size: 15px">
+        Sources:<br>
+          <a href="https://app.soundcharts.com/app/artist/bts/audience/insights" style="color: rgb(62, 61, 61);">SoundChart</a> | 
+          <a href="https://worldpopulationreview.com/" style="color: rgb(62, 61, 61);">World Population</a>|
+          <a href="https://trends.google.com/trends/explore?date=2023-01-01%202024-08-31&q=%2Fm%2F0w68qx3,exo,%2Fg%2F11byzf3gtr,%2Fg%2F11btzyw8k4,Seventeen&hl=en-GB" style="color: rgb(62, 61, 61);">Google Trends</a>|
+          <a href="https://youtu.be/V4qqOR4QN2Q?si=C50X0Fw6DoQLaBNM" style="color: rgb(30, 4, 4);">BTS Census Army</a>|
+          <a href="https://touringdata.wordpress.com/2019/02/16/bts-love-yourself-tour/" style="color: rgb(62, 61, 61);">Touring Data</a>|
+          <a href="https://www.fortworth.com/listing/fort-worth-convention-center/3577/" style="color:rgb(62, 61, 61);">Simple View INC. </a>|
+          <a href="https://www.metlifestadium.com/stadium/about-us#:~:text=It%20is%20one%20of%20the,events%20and%203%2C000%20special%20events." style="color:rgb(62, 61, 61);">MetLife Stadium</a>|
+          <a href="https://x.com/cypherluscious/status/1679955872737382400" style="color: rgb(62, 61, 61);">StadiumDB</a>|
+          <a href="https://feelfukuoka.com/en/sightseeing/dome/" style="color: rgb(62, 61, 61);">Feel Fukuoka Japan</a>|
+          <a href="https://www.koreaboo.com/lists/large-concert-stadiums-bts-able-sell/" style="color: rgb(62, 61, 61);">Koreaboo</a>|
+          <a href="https://www.japan.travel/en/ph/special-features/japan-concert-domes-tokyo-osaka/#:~:text=Inaugurated%20in%201988%2C%20Tokyo%20Dome,)%2C%20depending%20on%20the%20configuration." style="color: rgb(62, 61, 61);">JNTO</a>|
+          <a href="https://www.upo2tickets.co.uk/o2-arena-capacity/" style="color: rgb(62, 61, 61);">Headout Inc</a>|
+          <a href="https://ca.billboard.com/fyi/hamilton%E2%80%99s-largest-venue-set-280m-renovation" style="color: rgb(62, 61, 61);">Billboard Fyi Editor </a>|
+          <a href="https://www.prucenter.com/rentals/arena-floor" style="color: rgb(62, 61, 61);">Devils Arena Entertainment LLC </a>|
+          <a href="https://www.prolyte.com/solutions/venues/ziggo-dome#:~:text=The%20Ziggo%20Dome%20is%20Amsterdam's,the%20perfect%20concert%20venue%20size." style="color: rgb(62, 61, 61);">Area Four Industries	</a>|
+          <a href="https://www.travelynne.ca/blog/concerts-rajamangala-national-stadium-bangkok" style="color: rgb(62, 61, 61);">Lynne Lessard	</a>|
+          <a href="https://populous.com/projects/citi-field" style="color: rgb(62, 61, 61);">Populous	</a>|
+          <a href="https://www.musewiki.org/Chicago_United_Center" style="color: rgb(62, 61, 61);">MuseWiki	</a>|
+          <a href="https://www.asiaworld-expo.com/en-us/planning/venues/asiaworld-arena/#:~:text=AsiaWorld%2DArena%20(Hall%201)%20is%20a%20world%2Dclass,international%20conferences%20and%20mega%20events." style="color: rgb(62, 61, 61);">AsiaWorld-Expo Management Limited	</a>|
+          <a href="https://copaamerica.com/en/stadiums/mercedez-benz-stadium" style="color: rgb(62, 61, 61);">CONMEBOL Copa América		</a>|
+          <a href="https://www.emco-bau.com/en/featured_item/accorhotels-arena-paris-frankreich/#:~:text=Today%2C%20the%20arena%20offers%20a,in%20around%2030%20possible%20configurations." style="color: rgb(62, 61, 61);">EMCO Group</a>|
+          <a href="https://www.allegiantstadium.com/stadium/about-allegiant-stadium#:~:text=Allegiant%20Stadium%20is%20conveniently%20located,with%20a%20capacity%20of%2065%2C000." style="color: rgb(62, 61, 61);">Allegiant Stadium</a>|
+          <a href="https://ibighit.com/bts/eng/profile/" style="color: rgb(62, 61, 61);">Bighit Official</a>|
+          <a href="https://www.bu.edu/lernet/artemis/years/2017/projects/StudentWebsites/Michelle/pages/BTS.html" style="color: rgb(62, 61, 61);">Artemis Project 2017</a>|
+      </p>
+     
+    </div>
+
+    
+  </div>
+
+
+  </div>
+  <!-- end dashboard page -->
+
+
+  <!--include script to embed the vega-lite visualization-->
+  <script type="text/javascript">
+
+    // choropleth map (BTS popularity based on Instagram followers)
+    var specVis1 = "js/bts_popularity_choropleth_map.vg.json";
+    // multiple line chart (search interest trends over years - kpop and worlwide artists)
+    var specVis2 = "js/search_bts_kpop_multiple_line.vg.json";
+    var specVis3 = "js/search_bts_worldwide_multiple_line.vg.json";
+    // pie/donut chart (Demographics of ARMY - BTS fans)
+    // gender
+    var specVis4 = "js/gender_pie_chart_survey.vg.json";
+    // var specVis4 = "js/gender_pie_chart_platform_label.vg.json";
+    // var specVis4 = "js/gender_donut_chart_survey.vg.json";
+    // age
+    var specVis5 = "js/age_bar_survey.vg.json";
+    // stacked bar chart (fan base evolution over years across various platforms)
+    var specVis6 = "js/fan_base_evo_stacked.vg.json";
+    // bubble chart (revenue of LY concert tour in 2019-2020)
+    var specVis7 = "js/bubble_concert.vg.json";
+    // dot strip plot (BTS Music Style)
+
+  
+    // embed the viz 
+    vegaEmbed('#choropleth_map_popularity', specVis1, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#multiple_line_chart_trend", specVis2, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+    vegaEmbed("#multiple_line_chart1_trend", specVis3, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#pie_chart_gender", specVis4, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#bar_age", specVis5, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#stacked_bar_fanbase", specVis6, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed("#bubble_chart_revenue", specVis7, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+</script>
+
+<script>
+   const memberInfo = {
+            'RM': 'Full Name: Kim Namjoon (김남준)\nStage Name: RM\nPostion: Leader, Main Rapper, Songwriter, Producer, Composer\n\nRM is known for being a formidable rapper, a genius lyricist, and an eloquent leader.',
+            'Jin': 'Full name: Kim Seokjin (김석진)\nStage Name: Jin\nPosition: Vocalist, Visual\n\nJin, the oldest member, is known for his "silver voice" as well as his striking visuals and sense of humor.',
+            'Suga': 'Full Name: Min Yoongi (민윤기)\nStage Name: Suga\nPosition: Lead rapper, Producer, Composer, Songwriter\n\nSuga is known for his mind-blowing delivery, introspective lyrics, and exceptional production skills.',
+            'J-Hope': 'Full Name: Jeon Hoseok (정호석)\nStage Name: J-Hope\nPosition: Main dancer, Lead Rapper, Songwriter, Composer\n\nJ-Hope is known for his positive energy and exceptional dance skills. His rap style is described as calm and melodic, contrasting with a more aggressive tone.',
+            'Jimin': 'Full Name: Park Jimin (박지민)\nStage Name: Jimin\nPosition: Main Dancer, Lead Vocalist\n\nJimin is known for his graceful movements and unique voice. He is a top-class performer in contemporary dance.',
+            'V': 'Full Name: Kim Taehyung (김태형)\nStage Name: V\nPosition: Vocalist, Visual\n\nV is known for his deep, soulful voice and artistic sensibilities. A vocal teacher praised his voice during training in America, describing it as "kissed by an angel".',
+            'Jung Kook': 'Full Name: Jeon Jung Kook (전정국)\nStage Name: Jung Kook\nPosition: Main vocalist, Maknae, Lead Dancer, Sub Rapper, Center\n\nJungkook is the youngest member of BTS and is known as the "Golden Maknae" for his well-rounded abilities, as well as his light, smooth, and mellow timbre voice.'
+        };
+
+        const memberImages = document.querySelectorAll('.member-img');
+        const popupOverlay = document.querySelector('.popup-overlay');
+        const closeButton = document.querySelector('.close-button');
+        const memberNameElement = document.getElementById('member-name');
+        const memberInfoElement = document.getElementById('member-info');
+        const memberPopupImg = document.querySelector('.member-popup-img');
+
+        memberImages.forEach(img => {
+            img.addEventListener('click', () => {
+                const member = img.dataset.member;
+                memberNameElement.textContent = member;
+                memberInfoElement.textContent = memberInfo[member];
+                memberPopupImg.src = img.src;
+                memberPopupImg.alt = img.alt;
+                popupOverlay.classList.add('active');
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            popupOverlay.classList.remove('active');
+        });
+
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+</script>
+
+</body>
+
+</html>

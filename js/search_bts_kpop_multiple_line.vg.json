@@ -1,0 +1,144 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 520,
+    "height": 500,
+
+    "data" :{"url": "https://raw.githubusercontent.com/RuiEnKoe/FIT3179_DataVisualisation2/refs/heads/main/data/bts_kpop_search_trend_long.csv"},
+
+    "encoding": {
+        "x": {
+            "timeUnit": "yearmonthdate",
+            "field": "Week",
+            "type": "temporal",
+            "axis": {
+                "title": "Year",                
+                "grid": false
+            }
+        },
+
+        "tooltip": [
+        {
+                "field": "BTS",
+                "type": "quantitative"
+        },
+
+        {
+                "field": "EXO",
+                "type": "quantitative"
+        },
+            
+        {
+                "field": "BLACKPINK",
+                "type": "quantitative"
+        },
+
+        {
+                "field": "TWICE",
+                "type": "quantitative"
+        },
+
+        {
+                "field": "SEVENTEEN",
+                "type": "quantitative"
+        },
+
+        {
+                "field": "Week",
+                "type": "temporal"
+        }
+        ] 
+    },
+
+    "layer": [
+        {
+            "encoding": {
+                "y": {
+                    "field": "search_popularity_trends",
+                    "type": "quantitative",
+                    "title": "Search Interest Value",
+                    "axis": {
+                        "grid": false,
+                        "title": "Search Interest Value"
+                    },
+                    "scale": {
+                        "domain": [0, 110]
+                    }
+                },
+
+                "color": {
+                    "field": "artist",
+                    "type": "nominal",
+                    "scale": {
+                        "range": ["#fb00b8e2", "#6a3d9a", "#837651", "#7299e3", "#fdb3a5"]
+                    },
+                    "legend": null           
+                }
+            },
+
+            "layer": [
+                {
+                    "mark": "line"
+                },
+
+                {
+                "transform":[
+                        {
+                        "filter": {
+                            "param": "hover",
+                            "empty": false
+                            }
+                        }
+                    ], 
+                    "mark": "point"
+                }
+            ]
+        },
+        
+        {
+            "transform": [
+                {
+                    "pivot": "artist", 
+                    "value": "search_popularity_trends", 
+                    "groupby": ["Week"]
+                }
+            ],
+
+            "mark": "rule",
+            "encoding": 
+            {
+                "opacity": {
+                    "condition": {
+                        "value": 0.5, 
+                        "param": "hover", 
+                        "empty": false
+                    },
+                    "value": 0
+                }
+            },
+
+            "params": [
+                {
+                    "name": "hover",
+                    "select": {
+                        "type": "point",
+                        "fields": ["Week"],
+                        "nearest": true,
+                        "on": "mouseover",
+                        "clear": "mouseout"
+                    }
+                }
+            ]
+        }    
+    ],
+
+    "config": {
+        "axisX": {
+            "minExtent": 20
+        },
+        
+
+        "title": {
+            "dx": -20
+        }
+    }
+}
